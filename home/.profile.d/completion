@@ -1,7 +1,6 @@
 # Completetion
 completions=$(cat <<COMPLETIONS
-`brew --prefix`/etc/bash_completion
-`brew --prefix`/Library/Contributions/brew_bash_completion.sh
+/usr/local/etc/bash_completion.d/hub.bash_completion.sh
 $HOME/d/django/extras/django_bash_completion
 $HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash
 COMPLETIONS)

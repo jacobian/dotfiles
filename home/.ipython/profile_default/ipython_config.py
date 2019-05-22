@@ -9,10 +9,10 @@ c = get_config()
 c.InteractiveShell.autoindent = True
 c.InteractiveShell.confirm_exit = False
 c.TerminalIPythonApp.display_banner = False
-c.InteractiveShell.colors = 'Linux'
-c.InteractiveShell.editor = 'subl -n -w'
+c.InteractiveShell.colors = "Linux"
+c.InteractiveShell.editor = "subl -n -w"
 
-c.InlineBackend.figure_format = 'retina'
+c.InlineBackend.figure_format = "retina"
 
 # UGH the old style was much easier.
 # See https://stackoverflow.com/questions/38275585/adding-color-to-new-style-ipython-v5-prompt
@@ -21,20 +21,22 @@ c.InlineBackend.figure_format = 'retina'
 # c.PromptManager.out_template = '[\#]   : '
 # c.PromptManager.justify = True
 
+
 class MyPrompts(Prompts):
     def in_prompt_tokens(self, cli=None):
         return (
-            (Token.Prompt, '['),
+            (Token.Prompt, "["),
             (Token.PromptNum, str(self.shell.execution_count)),
-            (Token.Prompt, '] >>> ')
+            (Token.Prompt, "] >>> "),
         )
 
     def out_propmt_tokens(self):
         return (
-            (Token.Prompt, '['),
+            (Token.Prompt, "["),
             (Token.PromptNum, str(self.shell.execution_count)),
-            (Token.Prompt, ']   : ')
+            (Token.Prompt, "]   : "),
         )
+
 
 c.TerminalInteractiveShell.prompts_class = MyPrompts
 

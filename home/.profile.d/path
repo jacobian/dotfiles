@@ -7,14 +7,7 @@ fi
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Local stuff
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$HOME/.local/bin:$PATH
 
 # NPM
 export PATH=$PATH:/usr/local/share/npm/bin
-
-# Ruby - chruby
-source /usr/local/share/chruby/chruby.sh
-chruby 2.1
-
-# pipsi - https://github.com/mitsuhiko/pipsi
-export PATH=~/.local/bin:$PATH

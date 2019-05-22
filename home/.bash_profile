@@ -14,3 +14,5 @@ shopt -s cdspell
 shopt -s extglob
 shopt -s histappend
 shopt -s nocaseglob
+# Created by `userpath` on 2019-05-20 19:40:12
+export PATH="$PATH:/Users/jacob/.local/bin"

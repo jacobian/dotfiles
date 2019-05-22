@@ -1,7 +1,0 @@
-#!/bin/bash
-
-PYTHON=$HOME/.virtualenvs/clonus/bin/python
-CLONUS=$HOME/src/clonus3/clonus3.py
-CONFIG=$HOME/.clonus3
-
-$PYTHON $CLONUS $@ $CONFIG
