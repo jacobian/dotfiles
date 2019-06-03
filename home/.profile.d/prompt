@@ -14,12 +14,31 @@ RED="1"
 _vcprompt() {
     vcprompt -f $' on \033[34m%n\033[00m:\033[00m%b\033[32m%m%u'
 }
+
 _lastcommandfailed() {
   code=$?
   if [ $code != 0 ]; then
     echo -n $'\033[41m\033[39mexited '
     echo -n $code
     echo -n $'\033[0m '
+  fi
+}
+
+_virtualenv() {
+    if [ x$VIRTUAL_ENV != x ]; then
+    if [[ $VIRTUAL_ENV == */pypoetry/virtualenvs/* ]]; then
+      ENV_NAME=`basename "${VIRTUAL_ENV}"`
+    else
+      folder=`dirname "${VIRTUAL_ENV}"`
+      ENV_NAME=`basename "$folder"`
+    fi
+    echo -n $' \033[37mworkon \033[31m'
+    echo -n $ENV_NAME
+    echo -n $'\033[00m'
+    # Shell title
+    echo -n $'\033]0;venv:'
+    echo -n $ENV_NAME
+    echo -n $'\007'
   fi
 }
 
@@ -36,6 +55,7 @@ function _bg {
 export BASEPROMPT="\n\$(_lastcommandfailed)\
 $(_fg $GREEN)\w\
 $(_fg $GRAY)\$(_vcprompt)\
+$(_virtualenv)\
 $(_clr)"
 export PS1="${BASEPROMPT}
 $ "
