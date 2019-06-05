@@ -1,5 +1,22 @@
-export PYENV_ROOT="$HOME/.pyenv"
+# I have my own workon prompt, see prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+export PYENV_ROOT="$HOME/.pyenv"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# Workaround for pyenv/poetry PATH conflicts
+# see https://github.com/sdispater/poetry/issues/571
+
+poetry() {
+    if [[ $@ == "shell" ]]; then
+        if ([[ -f "$(poetry env info -p)/bin/activate" ]] && [[ -z "${VIRTUAL_ENV:-}" ]]); then
+            command source $(poetry env info -p)/bin/activate
+        else 
+            command poetry "$@"
+        fi
+    else
+        command poetry "$@"
+    fi
+}

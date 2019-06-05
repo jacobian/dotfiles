@@ -26,20 +26,18 @@ _lastcommandfailed() {
 
 _virtualenv() {
     if [ x$VIRTUAL_ENV != x ]; then
-    if [[ $VIRTUAL_ENV == */pypoetry/virtualenvs/* ]]; then
-      ENV_NAME=`basename "${VIRTUAL_ENV}"`
-    else
-      folder=`dirname "${VIRTUAL_ENV}"`
-      ENV_NAME=`basename "$folder"`
+        if [[ $VIRTUAL_ENV == */pypoetry/virtualenvs/* ]]; then
+            # If this is a poetry env strip the -xxxx-pyx.y from the end
+            ENV_NAME=`basename "${VIRTUAL_ENV}" | rev | cut -d- -f3- | rev`
+        else
+            folder=`dirname "${VIRTUAL_ENV}"`
+            ENV_NAME=`basename "$folder"`
+        fi
+      
+      echo -n $' \033[37mworkon \033[31m'
+      echo -n $ENV_NAME
+      echo -n $'\033[00m'
     fi
-    echo -n $' \033[37mworkon \033[31m'
-    echo -n $ENV_NAME
-    echo -n $'\033[00m'
-    # Shell title
-    echo -n $'\033]0;venv:'
-    echo -n $ENV_NAME
-    echo -n $'\007'
-  fi
 }
 
 function _clr {
@@ -55,7 +53,7 @@ function _bg {
 export BASEPROMPT="\n\$(_lastcommandfailed)\
 $(_fg $GREEN)\w\
 $(_fg $GRAY)\$(_vcprompt)\
-$(_virtualenv)\
+\$(_virtualenv)\
 $(_clr)"
 export PS1="${BASEPROMPT}
 $ "
