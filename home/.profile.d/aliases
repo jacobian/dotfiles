@@ -1,11 +1,9 @@
 alias git=hub
 alias ls='ls -F'
-alias pph='export PYTHONPATH=`pwd`'
-alias py="ipython"
 alias rcp="rsync -aP"
-alias cdbrew="cd $(brew --prefix)"
-alias cdcask="cd $(brew --prefix)/Library/Taps/phinze-cask/Casks"
 alias fixcam="sudo pkill VDCAssistant"
+alias h=heroku
+alias tf=terraform
 
 # source a .env file's info into the current shell.
 function senv() {
@@ -16,14 +14,8 @@ function senv() {
   eval "$allexport"
 }
 
-alias fixcam="sudo pkill AppleCameraAssistant"
-
 function pyg() {
     pbpaste | pygmentize -f rtf -O "style=friendly,fontface=Source Code Pro" "$1" | pbcopy
-}
-
-function code () {
-    VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
 }
 
 # homeshick
