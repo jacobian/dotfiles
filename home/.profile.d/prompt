@@ -29,6 +29,8 @@ _virtualenv() {
         if [[ $VIRTUAL_ENV == */pypoetry/virtualenvs/* ]]; then
             # If this is a poetry env strip the -xxxx-pyx.y from the end
             ENV_NAME=`basename "${VIRTUAL_ENV}" | rev | cut -d- -f3- | rev`
+        elif [[ $VIRTUAL_ENV == */.virtualenvs/* ]]; then
+            ENV_NAME=`basename "${VIRTUAL_ENV}"`
         else
             folder=`dirname "${VIRTUAL_ENV}"`
             ENV_NAME=`basename "$folder"`
@@ -37,6 +39,13 @@ _virtualenv() {
       echo -n $' \033[37mworkon \033[31m'
       echo -n $ENV_NAME
       echo -n $'\033[00m'
+    fi
+}
+
+_vault() {
+    if [ x$AWS_VAULT != x ]; then
+        VAULT=`echo -n $AWS_VAULT | cut -d= -f2`
+        echo -n " [aws: $VAULT]"
     fi
 }
 
@@ -52,7 +61,8 @@ function _bg {
 
 export BASEPROMPT="\n\$(_lastcommandfailed)\
 $(_fg $GREEN)\w\
-$(_fg $GRAY)\$(_vcprompt)\
+$(_fg $GRAY)\$(_vcprompt)$(_clr)\
+$(_fg $ORANGE)\$(_vault)$(_clr)\
 \$(_virtualenv)\
 $(_clr)"
 export PS1="${BASEPROMPT}

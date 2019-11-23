@@ -1,5 +1,2 @@
 #!/bin/bash
 # This hook is run after every virtualenv is activated.
-
-PS1="$BASEPROMPT $(_fg 240)workon \033[31m\$(basename '${VIRTUAL_ENV}')\033[00m
-$ "

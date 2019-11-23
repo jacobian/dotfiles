@@ -1,10 +1,11 @@
 source $HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash
 
 which -s pip && eval "`pip completion --bash`"
-which -s hub && source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
-
-# Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
+which -s aws_completer && complete -C `which aws_completer` aws
 
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=/Users/jacob/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
+
+for bcfile in /usr/local/etc/bash_completion.d/* ; do
+  . $bcfile
+done

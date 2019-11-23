@@ -20,3 +20,7 @@ poetry() {
         command poetry "$@"
     fi
 }
+
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/pipx/venvs/virtualenvwrapper/bin/python
+source /Users/jacob/.local/bin/virtualenvwrapper.sh
