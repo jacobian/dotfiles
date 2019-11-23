@@ -1,30 +1,5 @@
-alias git=hub
-alias ls='ls -F'
-alias rcp="rsync -aP"
-alias fixcam="sudo pkill VDCAssistant"
-alias h=heroku
-alias tf=terraform
-alias av=aws-vault
-
-# source a .env file's info into the current shell.
-function senv() {
-  typeset allexport
-  allexport=$(set +o | grep allexport)
-  set -a
-  source .env
-  eval "$allexport"
-}
-
-function pyg() {
-    pbpaste | pygmentize -f rtf -O "style=friendly,fontface=Source Code Pro" "$1" | pbcopy
-}
-
-# homeshick
-source $HOME/.homesick/repos/homeshick/homeshick.sh
-
 # aws-vault + yuibkey helpers
 # see https://gist.github.com/chtorr/0ecc8fca27a4c5e186c636c262cc4757
-
 
 function _aws_check_profile() {
   if [ $# -eq 0 ]
