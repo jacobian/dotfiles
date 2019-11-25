@@ -6,7 +6,16 @@ ZSH_THEME="jacobian"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git brew heroku npm aws terraform)
+plugins=(
+    aws
+    brew
+    django
+    github
+    heroku
+    npm
+    pyenv
+    terraform
+)
 source $ZSH/oh-my-zsh.sh
 
 
