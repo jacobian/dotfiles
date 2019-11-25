@@ -7,7 +7,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 #     if [[ $@ == "shell" ]]; then
 #         if ([[ -f "$(poetry env info -p)/bin/activate" ]] && [[ -z "${VIRTUAL_ENV:-}" ]]); then
 #             command source $(poetry env info -p)/bin/activate
-#         else 
+#         else
 #             command poetry "$@"
 #         fi
 #     else
@@ -15,10 +15,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 #     fi
 # }
 
-# virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/pipx/venvs/virtualenvwrapper/bin/python
-source /Users/jacob/.local/bin/virtualenvwrapper.sh
+# virtualenvwrapper - use the lazy version, again for shell startup time.
+[ -e "$commands[virtualenvwrapper_lazy.sh]" ] && source "$commands[virtualenvwrapper_lazy.sh]"
 
 # pipx
 path+=/Users/jacob/.local/bin

@@ -1,4 +1,3 @@
-alias git=hub
 alias ls='ls -F'
 alias h=heroku
 alias tf=terraform

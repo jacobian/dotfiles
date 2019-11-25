@@ -7,7 +7,6 @@ ZSH_THEME="jacobian"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
-    aws
     brew
     django
     github
@@ -17,8 +16,6 @@ plugins=(
     terraform
 )
 source $ZSH/oh-my-zsh.sh
-
-
 
 # --------- reference below - nothing's enabled -------
 
