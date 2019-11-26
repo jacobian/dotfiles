@@ -2,20 +2,22 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_CUSTOM="$HOME/.homesick/repos/jacobian/zsh_custom"
-ZSH_THEME="jacobian"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
-    brew
-    django
-    github
-    heroku
-    npm
-    pyenv
-    terraform
+  brew
+  django
+  github
+  heroku
+  npm
+  pyenv
+  terraform
 )
 source $ZSH/oh-my-zsh.sh
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # --------- reference below - nothing's enabled -------
 
