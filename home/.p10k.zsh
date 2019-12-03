@@ -52,8 +52,7 @@
       command_execution_time  # duration of the last command
       background_jobs         # presence of background jobs
       direnv                  # direnv status (https://direnv.net/)
-      jkm_virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-      anaconda                # conda environment (https://conda.io/)
+      jkm_virtualenv          # my virtualenv replacement; see below
       pyenv                   # python environment (https://github.com/pyenv/pyenv)
       nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
       nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
@@ -108,8 +107,7 @@
     p10k segment -f blue -r -i 'PYTHON_ICON' -t $_env_name
   }
 
-  # Basic style options that define the overall look of your prompt. You probably don't want to
-  # change them.
+  # Basic style options:
   typeset -g POWERLEVEL9K_BACKGROUND=                            # transparent background
   typeset -g POWERLEVEL9K_{LEFT,RIGHT}_{LEFT,RIGHT}_WHITESPACE=  # no surrounding whitespace
   typeset -g POWERLEVEL9K_{LEFT,RIGHT}_SUBSEGMENT_SEPARATOR=' '  # separate segments with a space
@@ -141,26 +139,7 @@
   # capable font to use them. See POWERLEVEL9K_MODE below.
   typeset -g POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION='${P9K_VISUAL_IDENTIFIER// }'
 
-  # This option makes a difference only when default icons are enabled for all or some prompt
-  # segments (see POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION above). LOCK_ICON can be printed as
-  # $'\uE0A2', $'\uE138' or $'\uF023' depending on POWERLEVEL9K_MODE. The correct value of this
-  # parameter depends on the provider of the font your terminal is using.
-  #
-  #   Font Provider                    | POWERLEVEL9K_MODE
-  #   ---------------------------------+-------------------
-  #   Powerline                        | powerline
-  #   Font Awesome                     | awesome-fontconfig
-  #   Adobe Source Code Pro            | awesome-fontconfig
-  #   Source Code Pro                  | awesome-fontconfig
-  #   Awesome-Terminal Fonts (regular) | awesome-fontconfig
-  #   Awesome-Terminal Fonts (patched) | awesome-patched
-  #   Nerd Fonts                       | nerdfont-complete
-  #   Other                            | compatible
-  #
-  # If this looks overwhelming, either stick with a preinstalled system font and set
-  # POWERLEVEL9K_MODE=compatible, or install the recommended Powerlevel10k font from
-  # https://github.com/romkatv/powerlevel10k/#recommended-meslo-nerd-font-patched-for-powerlevel10k
-  # and set POWERLEVEL9K_MODE=nerdfont-complete.
+  # Nerd fonts - I'm using https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro
   typeset -g POWERLEVEL9K_MODE=nerdfont-complete
 
   # When set to true, icons appear before content on both sides of the prompt. When set

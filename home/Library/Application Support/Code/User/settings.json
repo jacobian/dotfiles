@@ -121,5 +121,8 @@
     "*.yml": "ansible"
   },
   "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
-  "terminal.integrated.fontWeight": "400"
+  "terminal.integrated.fontWeight": "400",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
