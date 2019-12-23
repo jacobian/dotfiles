@@ -14,9 +14,16 @@ plugins=(
   npm
   pyenv
   terraform
+  gcloud
 )
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Homebrew completion - this has to happen before compinit,
+# see https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 
 source $ZSH/oh-my-zsh.sh
 
