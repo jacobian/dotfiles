@@ -9,7 +9,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   brew
   django
-  github
   heroku
   npm
   pyenv
