@@ -66,6 +66,7 @@
       kubecontext             # current kubernetes context (https://kubernetes.io/)
       terraform               # terraform workspace (https://www.terraform.io)
       aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+      jkm_gcloud              # my custom gcloud, see beow
       # aws_eb_env            # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
       # azure                 # azure account name (https://docs.microsoft.com/en-us/cli/azure)
       context                 # user@hostname
@@ -105,6 +106,12 @@
     fi
 
     p10k segment -f blue -r -i 'PYTHON_ICON' -t $_env_name
+  }
+
+  function prompt_jkm_gcloud {
+      _config=$(gcloud config configurations list --filter="is_active=True" --format="get(name)")
+      # see https://www.nerdfonts.com/cheat-sheet for how I got the icon
+      p10k segment -f blue -i $'\uF1A0' -t "$_config"
   }
 
   # Basic style options:
