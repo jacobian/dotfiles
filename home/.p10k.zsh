@@ -109,9 +109,10 @@
   }
 
   function prompt_jkm_gcloud {
-      _config=$(gcloud config configurations list --filter="is_active=True" --format="get(name)")
-      # see https://www.nerdfonts.com/cheat-sheet for how I got the icon
-      p10k segment -f blue -i $'\uF1A0' -t "$_config"
+    if [[ -a ~/.config/gcloud/active_config ]]; then
+          # see https://www.nerdfonts.com/cheat-sheet for how I got the icon
+          p10k segment -f blue -i $'\uF1A0' -t $(cat ~/.config/gcloud/active_config)
+    fi
   }
 
   # Basic style options:
