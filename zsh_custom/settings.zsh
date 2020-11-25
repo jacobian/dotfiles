@@ -29,3 +29,6 @@ HISTSIZE=1000000              # save a lot of history
 
 # gcloud needs this
 export CLOUDSDK_PYTHON=python3
+
+# use `pass` for aws-vault
+export AWS_VAULT_BACKEND="pass"
