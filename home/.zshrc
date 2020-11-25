@@ -7,13 +7,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
-  brew
-  django
-  heroku
-  npm
-  pyenv
-  terraform
-  gcloud
+    brew
+    django
+    heroku
+    npm
+    pyenv
+    terraform
+    gcloud
 )
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -21,7 +21,7 @@ plugins=(
 # Homebrew completion - this has to happen before compinit,
 # see https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
 source $ZSH/oh-my-zsh.sh

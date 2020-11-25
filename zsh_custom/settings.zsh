@@ -1,5 +1,7 @@
 # exports / shell settings / shell options
 
+path+=~/bin
+
 # Basic term stuff
 export CLICOLOR=1
 export DISPLAY=:0.0

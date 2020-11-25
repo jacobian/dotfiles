@@ -3,7 +3,7 @@
 # while it checks for homebrew, but I have aws installed through pipx. So use
 # that instead.
 if [ -e /Users/jacob/.local/bin/aws_zsh_completer.sh ]; then
-  source /Users/jacob/.local/bin/aws_zsh_completer.sh
+    source /Users/jacob/.local/bin/aws_zsh_completer.sh
 fi
 
 # aws-vault + yuibkey helpers
