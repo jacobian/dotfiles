@@ -43,3 +43,5 @@
 	rulespath = /Users/jacobkaplan-moss/.git-support/seekret-rules
 [diff]
 	noprefix = true
+[pull]
+	rebase = false
