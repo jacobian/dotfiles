@@ -32,3 +32,6 @@ export CLOUDSDK_PYTHON=python3
 
 # use `pass` for aws-vault
 export AWS_VAULT_BACKEND="pass"
+
+# Don't let Homebrew upgrade the world
+export HOMEBREW_NO_AUTO_UPDATE=1
