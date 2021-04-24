@@ -7,6 +7,7 @@ COMPLETION_WAITING_DOTS="true"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 plugins=(
+    asdf
     brew
     django
     heroku
