@@ -1,0 +1,50 @@
+[user]
+	name = Jacob Kaplan-Moss
+	email = jacob@jacobian.org
+[color]
+	ui = auto
+[alias]
+    addremove = add --all .
+    archive-branch = !git branch -M "$1" "archive/$1"
+    chp = cherry-pick
+    ci = commit
+    co = checkout
+    st = status
+    superclean = clean -dfx
+    ammend = commit -a --amend
+    lg = log -10 --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset'
+    ready = rebase -i @{u}
+    standup = log --pretty=oneline --abbrev-commit --since yesterday --author jacob@jacobian.org
+    wip = commit -am '🚧'
+[apply]
+	whitespace = fix
+[gist]
+	browse = false
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+    pager = less -F -X
+	hooksPath = /Users/jacobkaplan-moss/.git-support/hooks
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[hub]
+	protocol = https
+[credential]
+	helper = osxkeychain
+[gitseekret]
+	version = 1
+	rulesenabled = aws.secret_access_key,aws.access_key_id,aws.account_id,mandrill.api_key,mandrill.username,mandrill.password,newrelic.license_key,slack.api_token
+	exceptionsfile = ""
+[gitseekret]
+	rulespath = /Users/jacobkaplan-moss/.git-support/seekret-rules
+[diff]
+	noprefix = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
