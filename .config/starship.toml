@@ -1,0 +1,21 @@
+format = '$all'
+scan_timeout = 0
+command_timeout = 0
+add_newline = true
+
+[character]
+format = '$symbol '
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+vicmd_symbol = '[❮](bold green)'
+
+[git_branch]
+symbol = ''
+style = 'purple underline'
+
+[directory]
+truncate_to_repo = false
+home_symbol = "~"
+truncation_symbol = "…"
+fish_style_pwd_dir_length = 1
+style = 'cyan'
