@@ -30,8 +30,8 @@ HISTSIZE=1000000              # save a lot of history
 # gcloud needs this
 export CLOUDSDK_PYTHON=python3
 
-# use `pass` for aws-vault
-export AWS_VAULT_BACKEND="pass"
-
 # Don't let Homebrew upgrade the world
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+# https://github.com/FiloSottile/yubikey-agent
+export SSH_AUTH_SOCK="/opt/homebrew/var/run/yubikey-agent.sock"
