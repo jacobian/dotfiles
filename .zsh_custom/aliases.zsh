@@ -1,5 +1,9 @@
-alias ls='ls -F'
-alias h=heroku
-alias tf=terraform
 alias av=aws-vault
+alias ave="aws-vault exec"
+alias avl="aws-vault login"
+alias d=docker
 alias dc=docker-compose
+alias h=heroku
+alias kc=kubectl
+alias ls='ls -F'
+alias tf=terraform
