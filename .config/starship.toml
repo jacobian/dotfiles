@@ -1,33 +1,69 @@
-format = '$all'
-scan_timeout = 30
-command_timeout = 500
+format = """
+$username\
+$hostname\
+$shlvl\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$cmd_duration\
+
+$fill\
+$docker_context\
+$package\
+$golang\
+$nodejs\
+$python\
+$ruby\
+$rust\
+$terraform\
+$memory_usage\
+$aws\
+$gcloud\
+$env_var\
+
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
+
 add_newline = true
+command_timeout = 500
+scan_timeout = 30
+
+[fill]
+symbol = " "
 
 [character]
+error_symbol = '[❯](bold red)'
 format = '$symbol '
 success_symbol = '[❯](bold green)'
-error_symbol = '[❯](bold red)'
 vicmd_symbol = '[❮](bold green)'
 
 [git_branch]
-symbol = ''
 style = 'purple underline'
+symbol = ''
 
 [directory]
-truncate_to_repo = false
-home_symbol = "~"
-truncation_symbol = "…"
 fish_style_pwd_dir_length = 1
+home_symbol = "~"
 style = 'cyan'
+truncate_to_repo = false
+truncation_symbol = "…"
 
 [package]
 disabled = true
 
 [git_status]
-format = '([$all_status$ahead_behind]($style) )'	
+format = '([$all_status$ahead_behind]($style) )'
 style = 'purple bold'
 
 [python]
-symbol = '' 
-format	= '[${symbol} (${version} )(\($virtualenv\) )]($style)'
+format = '[${symbol} (${version} )(\($virtualenv\) )]($style)'
 style = "green bold"
+symbol = ''
