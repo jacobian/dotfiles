@@ -13,6 +13,8 @@ plugins=(
     heroku
     npm
     terraform
+    fzf
+    z
 )
 
 if type starship &>/dev/null; then
