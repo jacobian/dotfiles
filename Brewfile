@@ -59,6 +59,7 @@ brew "ykman"
 brew "yubikey-agent", restart_service: true
 brew "zlib"
 brew "heroku/brew/heroku"
+brew "imagemagic"
 cask "1password"
 cask "alfred"
 cask "arduino"

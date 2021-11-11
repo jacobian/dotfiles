@@ -25,6 +25,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
     pager = less -F -X
+	attributesFile = ~/.gitattributes
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -41,3 +42,6 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[diff "image"]
+	textconv = imgcat
+	command = imgdiff
