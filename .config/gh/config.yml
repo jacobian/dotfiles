@@ -1,5 +1,6 @@
-git_protocol: https
+gh git_protocol: https
 prompt: enabled
 aliases:
-    co: pr checkout
-    pv: pr view -w
+  co: pr checkout
+  pv: pr view -w
+  qic: issue create --title="$1" --body=""
