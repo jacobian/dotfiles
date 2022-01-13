@@ -4,18 +4,16 @@
 [color]
 	ui = auto
 [alias]
-    addremove = add --all .
-    archive-branch = !git branch -M "$1" "archive/$1"
-    chp = cherry-pick
     ci = commit
     co = checkout
     st = status
     superclean = clean -dfx
-    ammend = commit -a --amend
     lg = log -10 --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset'
     ready = rebase -i @{u}
     standup = log --pretty=oneline --abbrev-commit --since yesterday --author jacob@jacobian.org
     wip = commit -am '🚧'
+    amend = commit --amend --no-edit
+    edit = commit --amend --only
 [apply]
 	whitespace = fix
 [gist]
