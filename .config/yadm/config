@@ -1,0 +1,3 @@
+[yadm]
+	cipher = openssl
+	openssl-old = true
