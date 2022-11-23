@@ -3,7 +3,7 @@
 -- then I applied https://github.com/jasonrudolph/keyboard/pull/73 manually
 -- what a mess
 
-hs.window.animationDuration = 0
+hs.window.animationDuration = 0.01
 window = hs.getObjectMetatable("hs.window")
 
 -- +-----------------+
