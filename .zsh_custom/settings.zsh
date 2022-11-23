@@ -34,4 +34,4 @@ export CLOUDSDK_PYTHON=python3
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # https://github.com/FiloSottile/yubikey-agent
-export SSH_AUTH_SOCK="/opt/homebrew/var/run/yubikey-agent.sock"
+export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
