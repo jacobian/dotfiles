@@ -7,3 +7,4 @@ alias h=heroku
 alias kc=kubectl
 alias ls='ls -F'
 alias tf=terraform
+alias yt-dlmp3='yt-dlp -f ba -x --audio-format mp3'
