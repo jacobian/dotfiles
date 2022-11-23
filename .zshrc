@@ -7,6 +7,7 @@ COMPLETION_WAITING_DOTS="true"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 plugins=(
+    aws
     asdf
     brew
     heroku
@@ -27,3 +28,7 @@ if type brew &>/dev/null; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
