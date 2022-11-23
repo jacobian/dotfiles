@@ -4,3 +4,4 @@ aliases:
   co: pr checkout
   pv: pr view -w
   qic: issue create --title="$1" --body=""
+  merge: pr merge --merge --delete-branch
