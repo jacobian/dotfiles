@@ -31,7 +31,8 @@ HISTSIZE=1000000              # save a lot of history
 export CLOUDSDK_PYTHON=python3
 
 # Don't let Homebrew upgrade the world
-export HOMEBREW_NO_AUTO_UPDATE=1
+# Supposedly this is OK now, let's see what happens ...
+# export HOMEBREW_NO_AUTO_UPDATE=1
 
 # https://github.com/FiloSottile/yubikey-agent
 export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"

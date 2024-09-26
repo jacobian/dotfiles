@@ -67,3 +67,6 @@ style = 'purple bold'
 format = '[${symbol} (${version} )(\($virtualenv\) )]($style)'
 style = "green bold"
 symbol = ''
+
+[aws]
+format = '[$symbol($profile )(\($region\) )]($style)'

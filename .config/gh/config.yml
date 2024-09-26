@@ -1,7 +1,9 @@
 gh git_protocol: https
 prompt: enabled
 aliases:
-  co: pr checkout
-  pv: pr view -w
-  qic: issue create --title="$1" --body=""
-  merge: pr merge --merge --delete-branch
+    co: pr checkout
+    pv: pr view -w
+    qic: issue create --title="$1" --body=""
+    merge: pr merge --merge --delete-branch
+version: "1"
+git_protocol: ssh

@@ -6,6 +6,8 @@ COMPLETION_WAITING_DOTS="true"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+SHOW_AWS_PROMPT=false
+
 plugins=(
     aws
     asdf
