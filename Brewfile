@@ -1,11 +1,8 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 
 brew "curl"
 brew "duf"
-brew "exa"
 brew "fd"
 brew "tesseract"
 brew "ffmpeg"
