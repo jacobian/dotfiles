@@ -8,6 +8,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 SHOW_AWS_PROMPT=false
 
+# Dracula theme
+# See https://draculatheme.com/zsh for install instructions
+ZSH_THEME="dracula"
+
 plugins=(
     aws
     asdf
@@ -18,10 +22,6 @@ plugins=(
     fzf
     z
 )
-
-if type starship &>/dev/null; then
-    eval "$(starship init zsh)"
-fi
 
 # Homebrew completion - this has to happen before compinit,
 # see https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
@@ -34,3 +34,8 @@ source $ZSH/oh-my-zsh.sh
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+# init starship _after_ oh-my-zsh to avoid Dracula stomping on some of the config
+if type starship &>/dev/null; then
+    eval "$(starship init zsh)"
+fi

@@ -26,13 +26,3 @@ setopt HIST_FIND_NO_DUPS      # ignore duplicates when searching
 setopt HIST_REDUCE_BLANKS     # removes blank lines from history
 SAVEHIST=1000000              # save a lot of history
 HISTSIZE=1000000              # save a lot of history
-
-# gcloud needs this
-export CLOUDSDK_PYTHON=python3
-
-# Don't let Homebrew upgrade the world
-# Supposedly this is OK now, let's see what happens ...
-# export HOMEBREW_NO_AUTO_UPDATE=1
-
-# https://github.com/FiloSottile/yubikey-agent
-export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
