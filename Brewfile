@@ -25,8 +25,8 @@ brew "yubikey-agent", restart_service: true
 
 cask "1password"
 cask "1password-cli"
-cask "arc"
 cask "alfred"
+cask "arc"
 cask "dash"
 cask "elgato-camera-hub"
 cask "fantastical"
@@ -37,14 +37,17 @@ cask "font-roboto-condensed"
 cask "font-sauce-code-pro-nerd-font"
 cask "hammerspoon"
 cask "inkscape"
+cask "mimestream"
 cask "obsidian"
 cask "orcaslicer"
 cask "raspberry-pi-imager"
 cask "signal"
 cask "slack"
 cask "sonos"
+cask "tailscale"
+cask "usb-overdrive"
 cask "visual-studio-code"
 cask "vlc"
+cask "wezterm"
 
 mas "Paprika Recipe Manager 3", id: 1303222628
-
