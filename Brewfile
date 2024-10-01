@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "nikitabobko/tap"
 
+brew "bat"
 brew "curl"
 brew "duf"
 brew "eza"
@@ -52,4 +53,7 @@ cask "vlc"
 cask "wezterm"
 
 mas "Ivory", id: 6444602274
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
