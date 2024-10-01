@@ -8,9 +8,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 SHOW_AWS_PROMPT=false
 
-# Dracula theme
-# See https://draculatheme.com/zsh for install instructions
-ZSH_THEME="dracula"
+# Let Eza do its own colors
+DISABLE_LS_COLORS=true
 
 plugins=(
     aws

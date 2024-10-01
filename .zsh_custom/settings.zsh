@@ -13,6 +13,9 @@ export QUIETLOGIN
 export TERM=xterm-256color
 unset MAILCHECK
 
+# This is supposed to happen automatically but for whatever reason it doesn't
+export EZA_CONFIG_DIR=$HOME/.config/eza
+
 # Don't expand globs when tab completing
 setopt GLOB_COMPLETE
 
