@@ -8,7 +8,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 SHOW_AWS_PROMPT=false
 
-# Let Eza do its own colors
+# Let Eza do its own
 DISABLE_LS_COLORS=true
 
 plugins=(
@@ -33,8 +33,3 @@ source $ZSH/oh-my-zsh.sh
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
-
-# init starship _after_ oh-my-zsh to avoid Dracula stomping on some of the config
-if type starship &>/dev/null; then
-    eval "$(starship init zsh)"
-fi
