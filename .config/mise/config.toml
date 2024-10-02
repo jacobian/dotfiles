@@ -1,0 +1,5 @@
+[settings]
+pipx_uvx = true
+
+[tools]
+node = "lts"

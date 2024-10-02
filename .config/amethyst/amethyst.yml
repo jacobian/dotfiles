@@ -1,0 +1,52 @@
+layouts:
+  - tall
+  - tall-right
+  - fullscreen
+  - 3column-left
+
+mod1:
+  - control
+  - option
+
+mod2:
+  - control
+  - option
+  - shift
+
+mouse-swaps-windows: true
+mouse-resizes-windows: true
+debug-layout-info: true
+
+floating:
+  - com.apple.systempreferences
+  - com.1password.1password
+  - com.apple.calculator
+  - com.apple.clock
+  - com.apple.AddressBook
+  - com.apple.FaceTime
+  - com.tapbots.Ivory
+  - com.apple.MobileSMS
+  - org.whispersystems.signal-desktop
+  - com.flexibits.fantastical2.mac
+  - org.raspberrypi.imagingutility
+
+  # We want the inner preferences app, not Alf itself
+  - com.runningwithcrayons.Alfred-Preferences
+
+  - id: com.vivaldi.Vivaldi
+    window-titles:
+      - "Vivaldi Settings:"
+
+  # Annoying: mimestream changes window titles for settings windows,
+  # so need to list all of them
+  - id: "com.mimestream.Mimestream"
+    window-titles:
+      - "General"
+      - "Accounts"
+      - "Sidebar & List"
+      - "Viewing"
+      - "Composing"
+      - "Templates"
+      - "Signatures"
+      - "Filters"
+      - "Labs"
