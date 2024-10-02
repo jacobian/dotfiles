@@ -1,6 +1,7 @@
 # https://eza.rocks
 
-alias ls='eza'
-alias ll='eza --long --header --git'
+export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza
 
-export EZA_CONFIG_DIR=$HOME/.config/eza
+alias ls='eza --classify=auto'
+alias ll='eza --classify=auto --long --header --git'
+alias tree="eza --classify=auto --tree --icons=auto"
